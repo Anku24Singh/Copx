@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Questions</title>
+    <link rel="stylesheet" href="Pro.css">
+</head>
+<body>
+    <div id="question-container">
+        <!-- Question 1 -->
+        <div class="question-card" id="question-1">
+            <p>Which of these problems has affected you the most?</p>
+            <ul>
+                <li><input type="radio" name="q1" value="1"> Knowledge gap in understanding the basic trading terms</li>
+                <li><input type="radio" name="q1" value="2"> Too much noise in the market distracts you from the correct information</li>
+                <li><input type="radio" name="q1" value="3"> Trading seems too complex and no clear trusted learning path to get started</li>
+                <li><input type="radio" name="q1" value="4"> Suffering too much losses in the market</li>
+                <li><input type="radio" name="q1" value="5"> Making rash decisions or quit the stock market due to lack of time</li>
+                <li><input type="radio" name="q1" value="6"> Don't know why you are making or losing money</li>
+            </ul>
+            <button onclick="nextQuestion(2)">Submit</button>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question-card" id="question-2" style="display:none;">
+            <p>What are your investment goals?</p>
+            <input type="text" id="q2" placeholder="Your answer">
+            <button onclick="nextQuestion(3)">Submit</button>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question-card" id="question-3" style="display:none;">
+            <p>How do you evaluate the risk associated with your investments?</p>
+            <input type="text" id="q3" placeholder="Your answer">
+            <!-- <button onclick="navigateToNextPage()">Submit</button> -->
+            <button onclick="showTitleScreen()">Submit</button>
+        </div>
+    </div>
+    <!-- <div id="title-screen" style="display:none;">
+        <h1>Welcome to the Investment Portal</h1>
+        <p>Thank you for answering the questions. Let's start your investment journey!</p>
+    </div> -->
+
+    <script src="Pro.js"></script>
+</body>
+</html>
